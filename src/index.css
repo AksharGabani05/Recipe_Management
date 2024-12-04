@@ -1,0 +1,119 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Add any custom styles here */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body, #root {
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+main {
+  flex: 1;
+}
+
+.bg-orange,.btn-orange{
+  background-color: rgba(255, 166, 0, 0.808);
+}
+
+.banner-section {
+  background-image: url('./img/pngtree-vegetarian-recipes-overshoot-banner-image_139051.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.banner-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.banner-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.banner-section h1,
+.banner-section p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-section .btn-light:hover {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #007bff;
+}
+
+/* Additional styles for the featured recipes section */
+.recipe-card {
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.recipe-list-header {
+  background-image: url('./img/healthy-vegetarian-cooking-ingredients-tasty-pumpkin-dishes-recipes-bowls-tomato-sauces-spinach-sliced-onion-pumpkin-seeds-103694189.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 30px 0;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.recipe-list-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.recipe-list-header h1 {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
