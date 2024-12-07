@@ -3,31 +3,36 @@ import { Link } from 'react-router-dom';
 
 function RecipeCard({ recipe }) {
     return (
-        <div className="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
-            {/* Recipe Image */}
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+           
             <div className="relative">
                 <img
                     src={recipe.image}
                     alt={recipe.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-64 object-cover"
                 />
-                <span className="absolute top-2 right-2 bg-orange-500 text-white text-sm px-2 py-1 rounded-md shadow-md">
-                    {recipe.cookingTime} mins
-                </span>
             </div>
 
-            {/* Card Content */}
-            <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-800 truncate">
+            
+            <div className="p-6 space-y-4">
+                <h3 className="text-2xl font-semibold text-gray-800 truncate">
                     {recipe.title}
                 </h3>
-                <p className="text-gray-600 text-sm mt-2 line-clamp-2">
-                    {recipe.description}
+                <p className="text-gray-600 text-sm line-clamp-3">
+                    {recipe.instructions}
                 </p>
-                <div className="mt-4">
+                <div className="flex items-center justify-between mt-4">
+                  
+                    <div className="flex items-center space-x-1">
+                        <span className="text-yellow-500">
+                           
+                            ★★★★☆
+                        </span>
+                        <span className="text-gray-500 text-xs">4.5/5</span>
+                    </div>
                     <Link
                         to={`/recipe/${recipe.id}`}
-                        className="inline-block bg-orange-500 hover:bg-orange-600 text-white text-sm px-4 py-2 rounded-md transition duration-200"
+                        className="bg-dark text-white text-sm px-4 py-2 rounded-md transition duration-200"
                     >
                         View Recipe
                     </Link>

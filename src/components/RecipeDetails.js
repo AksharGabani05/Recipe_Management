@@ -14,45 +14,49 @@ function RecipeDetails({ recipes }) {
   }
 
   return (
-    <div className="container mx-auto mt-8 p-4">
+    <div className="container mx-auto mt-12 px-4 sm:px-6 lg:px-8">
       
-      <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">{recipe.title}</h1>
+      <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">{recipe.title}</h1>
 
-     
-      <div className="flex justify-center mb-8">
+      
+      <div className="flex justify-center mb-10">
         <img 
           src={recipe.image} 
           alt={recipe.title} 
-          className="rounded-lg shadow-lg w-full max-w-3xl object-cover"
+          className="rounded-xl shadow-xl w-full max-w-4xl object-cover"
         />
       </div>
 
-   
-      <p className="text-lg text-gray-700 mb-6">{recipe.description}</p>
+    
+      <p className="text-lg text-gray-800 mb-8 text-center">{recipe.description}</p>
 
      
-      <div className="mb-8">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Ingredients</h3>
-        <ul className="list-disc list-inside text-gray-700">
+      <div className="mb-12">
+        <h3 className="text-3xl font-semibold text-gray-900 mb-6">Ingredients</h3>
+        <ul className="list-disc list-inside text-lg text-gray-700 space-y-2">
           {recipe.ingredients.map((ingredient, index) => (
-            <li key={index} className="mb-1">{ingredient}</li>
+            <li key={index} className="flex items-start space-x-2">
+              <span className="text-xl font-medium">•</span>
+              <span>{ingredient}</span>
+            </li>
           ))}
         </ul>
       </div>
 
-      <div className="mb-8">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Instructions</h3>
-        <ol className="list-decimal list-inside text-gray-700">
+      
+      <div className="mb-12">
+        <h3 className="text-3xl font-semibold text-gray-900 mb-6">Instructions</h3>
+        <ol className="list-decimal list-inside text-lg text-gray-700 space-y-3">
           {recipe.instructions.map((instruction, index) => (
-            <li key={index} className="mb-2">{instruction}</li>
+            <li key={index} className="leading-relaxed">{instruction}</li>
           ))}
         </ol>
       </div>
 
-     
-      <p className="text-lg text-gray-700 font-medium">
-        Cooking Time: <span className="text-gray-800 font-bold">{recipe.cookingTime}</span> minutes
-      </p>
+    
+      <div className="mt-10 text-center">
+        <p className="text-xl text-gray-600">Enjoy your delicious recipe! 😊</p>
+      </div>
     </div>
   );
 }

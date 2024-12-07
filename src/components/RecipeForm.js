@@ -35,7 +35,7 @@ function RecipeForm({ onSubmit, initialData }) {
 
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-6">
-      {/* Title */}
+     
       <div className="mb-4">
         <label htmlFor="title" className="block text-gray-700 font-medium mb-2">Title</label>
         <input
@@ -50,7 +50,7 @@ function RecipeForm({ onSubmit, initialData }) {
         />
       </div>
 
-      {/* Description */}
+     
       <div className="mb-4">
         <label htmlFor="description" className="block text-gray-700 font-medium mb-2">Description</label>
         <textarea
@@ -64,7 +64,6 @@ function RecipeForm({ onSubmit, initialData }) {
         ></textarea>
       </div>
 
-      {/* Ingredients */}
       <div className="mb-4">
         <label htmlFor="ingredients" className="block text-gray-700 font-medium mb-2">Ingredients (comma-separated)</label>
         <input
@@ -79,7 +78,7 @@ function RecipeForm({ onSubmit, initialData }) {
         />
       </div>
 
-      {/* Instructions */}
+    
       <div className="mb-4">
         <label htmlFor="instructions" className="block text-gray-700 font-medium mb-2">Instructions (one per line)</label>
         <textarea
@@ -93,7 +92,7 @@ function RecipeForm({ onSubmit, initialData }) {
         ></textarea>
       </div>
 
-      {/* Cooking Time */}
+      
       <div className="mb-4">
         <label htmlFor="cookingTime" className="block text-gray-700 font-medium mb-2">Cooking Time (minutes)</label>
         <input
@@ -108,7 +107,7 @@ function RecipeForm({ onSubmit, initialData }) {
         />
       </div>
 
-      {/* Image URL */}
+    
       <div className="mb-6">
         <label htmlFor="image" className="block text-gray-700 font-medium mb-2">Image URL</label>
         <input
@@ -123,7 +122,7 @@ function RecipeForm({ onSubmit, initialData }) {
         />
       </div>
 
-      {/* Submit Button */}
+    
       <button
         type="submit"
         className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-200"
